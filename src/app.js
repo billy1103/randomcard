@@ -3,9 +3,13 @@ import "bootstrap";
 import "./style.css";
 
 window.onload = () => {
-  document.querySelector(".card").innerHTML = generateRandomSuit();
-  document.querySelector(".card").innerHTML = generateRandomNumber();
+  debugger;
+  const variable = generateRandomSuit();
+  document.querySelector(".topsuit").innerHTML = variable;
+  document.querySelector(".bottomsuit").innerHTML = variable;
+  document.querySelector(".number").innerHTML = generateRandomNumber();
 };
+
 let generateRandomNumber = () => {
   let numbers = [
     "2",
@@ -26,7 +30,7 @@ let generateRandomNumber = () => {
   return numbers[indexNumbers];
 };
 let generateRandomSuit = () => {
-  let suit = ["&#9830;", "&#9824;", "&#9829;", "&#9827;"];
+  let suit = ["&spades;", "&clubs;", "&#9830;", "&#10084;"];
   let indexSuit = Math.floor(Math.random() * suit.length);
   return suit[indexSuit];
 };
